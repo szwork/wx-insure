@@ -14,7 +14,7 @@ import { connect } from 'react-redux';
 class App extends Component {
   render() {
     const {children,...other} = this.props;
-    return React.cloneElement(this.props.children, other);
+    return React.cloneElement(children, other);
   }
 }
 /* Populated by react-webpack-redux:reducer

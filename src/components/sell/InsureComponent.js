@@ -6,9 +6,11 @@ require('styles/sell/Insure.scss');
 
 class InsureComponent extends React.Component {
   render() {
+    const {actions} = this.props;
     return (
       <div className="insure-component">
-        12412312312312
+        <button onClick={()=>actions.loadList()}>1111111111111</button>
+        <div></div>
       </div>
     );
   }

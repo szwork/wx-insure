@@ -35,8 +35,13 @@ config.module.loaders.push({
   loader: 'babel',
   include: [].concat(
     config.additionalPaths,
-    [ path.join(__dirname, '/../src') ]
+    [path.join(__dirname, '/../src')]
   )
 });
+
+Object.assign(config.resolve.alias, {
+  'react': 'react-lite',
+  'react-dom':'react-lite'
+})
 
 module.exports = config;

@@ -10,10 +10,11 @@ module.exports = {
   output: {
     path: path.join(__dirname, '/../dist/assets'),
     filename: 'app.js',
-    publicPath: `.${ defaultSettings.publicPath }`
+    publicPath: `.${defaultSettings.publicPath}`
   },
   devServer: {
     contentBase: './src/',
+    inline:true,
     historyApiFallback: true,
     hot: true,
     port: defaultSettings.port,
@@ -26,13 +27,15 @@ module.exports = {
       '.js',
       '.jsx'
     ],
+    root: [path.join(__dirname, './../src/common')],
     alias: {
-      actions: `${ defaultSettings.srcPath }/actions/`,
-      components: `${ defaultSettings.srcPath }/components/`,
-      sources: `${ defaultSettings.srcPath }/sources/`,
-      stores: `${ defaultSettings.srcPath }/stores/`,
-      styles: `${ defaultSettings.srcPath }/styles/`,
-      config: `${ defaultSettings.srcPath }/config/` + process.env.REACT_WEBPACK_ENV
+      actions: `${defaultSettings.srcPath}/actions/`,
+      components: `${defaultSettings.srcPath}/components/`,
+      sources: `${defaultSettings.srcPath}/sources/`,
+      stores: `${defaultSettings.srcPath}/stores/`,
+      styles: `${defaultSettings.srcPath}/styles/`,
+      services: `${defaultSettings.srcPath}/services/`,
+      config: `${defaultSettings.srcPath}/config/` + process.env.REACT_WEBPACK_ENV
     }
   },
   module: {},

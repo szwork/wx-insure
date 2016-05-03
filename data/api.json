@@ -1,0 +1,11 @@
+{
+  "list": [{
+    "appName": "reactYo",
+    "style": "scss",
+    "postcss": true
+  },{
+    "appName": "reactYo222",
+    "style": "scss",
+    "postcss": true
+  }]
+}
