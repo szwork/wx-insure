@@ -20,37 +20,29 @@ function getDefaultModules() {
       {
         test: /\.(js|jsx)$/,
         include: srcPath,
-        loader: 'eslint-loader'
+        loader: 'eslint'
       }
     ],
     loaders: [
       {
         test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      },
-      {
-        test: /\.sass/,
-        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&indentedSyntax'
+        loader: 'style!css'
       },
       {
         test: /\.scss/,
-        loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
-      },
-      {
-        test: /\.less/,
-        loader: 'style-loader!css-loader!less-loader'
-      },
-      {
-        test: /\.styl/,
-        loader: 'style-loader!css-loader!stylus-loader'
+        loader: `style!css?modules&localIdentName=[name]_[local]_[hash:base64:3]!sass`
       },
       {
         test: /\.(png|jpg|gif|woff|woff2)$/,
-        loader: 'url-loader?limit=8192'
+        loader: 'url?limit=1000'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json'
       },
       {
         test: /\.(mp4|ogg|svg)$/,
-        loader: 'file-loader'
+        loader: 'file'
       }
     ]
   };

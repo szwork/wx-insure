@@ -1,0 +1,20 @@
+$color-h1:#FF66CC;
+$size-h1:17px;
+
+$color-h2:#FFA5CF;
+$size-h2:14px;
+
+$color-btn-bg:#FF59C2;
+$color-bg-grey:#F3F2F0;
+
+$color-price:#FF6600;
+$color-a:#3399FF;
+
+$color-font-black:#333333;
+$color-font-white:#ffffff;
+$color-grey-border:#F3F2F0;
+
+@mixin h1{
+  color:$color-h1;
+  font-size:$size-h1;
+}

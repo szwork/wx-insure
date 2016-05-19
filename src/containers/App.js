@@ -10,6 +10,8 @@ import React, {
 } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import 'weui';
+import 'styles/App.scss';
 /* Populated by react-webpack-redux:reducer */
 class App extends Component {
   render() {

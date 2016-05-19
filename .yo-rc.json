@@ -1,6 +1,6 @@
 {
   "generator-react-webpack": {
-    "appName": "reactYo",
+    "appName": "wx-insur",
     "style": "scss",
     "postcss": true
   }

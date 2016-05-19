@@ -1,0 +1,25 @@
+/* Base Application Styles */
+@import "./common";
+
+:global{
+  
+  body{
+    color:$color-h2;
+  }
+
+  .weui_btn_primary{
+    background-color:$color-btn-bg;
+    &:active{
+      background-color:darken($color-btn-bg,10);
+    }
+  }
+
+  .grey-bg{
+    height: 100vh;
+    background-color:$color-bg-grey;
+  }
+  
+  .h1{
+    @include h1;
+  }
+}
