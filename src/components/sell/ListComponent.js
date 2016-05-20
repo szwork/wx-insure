@@ -8,6 +8,7 @@ const cx = classNames.bind(styles);
 
 class ListComponent extends React.Component {
   render() {
+    //const {actions} = this.props;
     return (
       <div className="grey-bg">
         <div className={cx('banner')}></div>
@@ -19,7 +20,7 @@ class ListComponent extends React.Component {
                 <MediaBoxDescription>
                   <img className={cx('img')} src="./../../images/u20.PNG" />
                 </MediaBoxDescription>
-                <MediaBoxTitle>粉红关爱险</MediaBoxTitle>
+                <MediaBoxTitle>粉红关爱险 <span className={cx('price')}>365.00<span className={cx('unit')}>元</span></span></MediaBoxTitle>
                 <MediaBoxInfo>
                   <MediaBoxInfoMeta>宫颈癌</MediaBoxInfoMeta>
                   <MediaBoxInfoMeta extra={true}>乳腺癌</MediaBoxInfoMeta>
