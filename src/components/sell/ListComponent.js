@@ -4,7 +4,6 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import {Panel,PanelBody,MediaBox,MediaBoxTitle,MediaBoxDescription,MediaBoxInfo,MediaBoxInfoMeta} from 'react-weui';
 import styles from 'styles/sell/List.scss';
-console.log(styles);
 const cx = classNames.bind(styles);
 
 class ListComponent extends React.Component {
@@ -18,7 +17,7 @@ class ListComponent extends React.Component {
             <PanelBody>
               <MediaBox>
                 <MediaBoxDescription>
-                  <img className={cx('img')} src="./../../images/u20.PNG"/>
+                  <img className={cx('img')} src="./../../images/u20.PNG" />
                 </MediaBoxDescription>
                 <MediaBoxTitle>粉红关爱险</MediaBoxTitle>
                 <MediaBoxInfo>
@@ -28,12 +27,12 @@ class ListComponent extends React.Component {
                 </MediaBoxInfo>
               </MediaBox>
             </PanelBody>
-          </Panel>      
+          </Panel>
           <Panel access={true}>
             <PanelBody>
               <MediaBox>
                 <MediaBoxDescription>
-                  <img className={cx('img')} src="./../../images/u20.PNG"/>
+                  <img className={cx('img')} src="./../../images/u20.PNG" />
                 </MediaBoxDescription>
                 <MediaBoxTitle>瑞博士书</MediaBoxTitle>
                 <MediaBoxInfo>
@@ -43,7 +42,7 @@ class ListComponent extends React.Component {
                 </MediaBoxInfo>
               </MediaBox>
             </PanelBody>
-          </Panel>  
+          </Panel>
         </div>
       </div>
     );

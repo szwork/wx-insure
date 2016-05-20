@@ -1,3 +1,4 @@
+/* global $ */
 import 'app-zepto';
 
 export default function (param) {
