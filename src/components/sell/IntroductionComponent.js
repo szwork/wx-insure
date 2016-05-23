@@ -1,20 +1,21 @@
 'use strict';
 
 import React from 'react';
-import classNames from 'classnames/bind';
-import {Cells,Cell,CellBody,CellFooter,Button} from 'react-weui';
-import styles from 'styles/sell/List.scss';
-const cx = classNames.bind(styles);
+import {Article} from 'react-weui';
 
-class IntroductionComponent extends React.Component {
-  render() {
-    return (
-      <div>
-        <img className={cx('img')} src="./../../images/u20.PNG" />
-        1
-      </div>
-    );
-  }
+function  IntroductionComponent(){
+  return (
+    <div>
+      <Article>
+        <section>
+          <img src="./../../images/intro-1.PNG" />
+          <img src="./../../images/intro-2.PNG" />
+          <img src="./../../images/intro-3.PNG" />
+          <img src="./../../images/intro-4.PNG" />
+        </section>
+      </Article>
+    </div>
+  );
 }
 
 IntroductionComponent.displayName = 'SellIntroductionComponent';

@@ -10,7 +10,7 @@ import React, {
 } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { push } from 'react-router-redux';
+import { push, replace, goBack } from 'react-router-redux';
 import 'weui';
 import 'styles/App.scss';
 /* Populated by react-webpack-redux:reducer */
@@ -44,7 +44,7 @@ function mapDispatchToProps(dispatch) {
   /* Populated by react-webpack-redux:action */
   const actions = {
     loadList: require('../actions/sell/loadList.js') ,
-    push
+    push, replace, goBack
   };
   const actionMap = { actions: bindActionCreators(actions, dispatch) };
   return actionMap;

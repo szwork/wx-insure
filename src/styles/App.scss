@@ -32,6 +32,15 @@
     background-color:$color-bg-grey;
   }
   
+  .hd{
+    height:$hd-height;
+    line-height: $hd-height;
+    background-color:$color-btn-bg;
+    color:$color-font-white;
+    text-align: center;
+    font-size:20px;
+  }
+  
   .h1{
     @include h1;
   }

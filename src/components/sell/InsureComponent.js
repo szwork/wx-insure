@@ -8,11 +8,12 @@ const cx = classNames.bind(styles);
 
 class InsureComponent extends React.Component {
   render() {
+    const {actions} = this.props;
     return (
       <div>
         <img className={cx('img') } src="./../../images/u20.PNG" />
         <Cells access={true}>
-          <Cell>
+          <Cell onClick={()=>actions.push('/intro')}>
             <CellBody>
               <h3>粉红关爱险</h3>
               <p>宫颈癌最高理赔： 30, 000元</p>
@@ -29,11 +30,11 @@ class InsureComponent extends React.Component {
             <CellBody>保障时间</CellBody>
             <CellFooter>1年</CellFooter>
           </Cell>
-          <Cell>
+          <Cell onClick={()=>actions.push('/form/active/')}>
             <CellBody>投保人信息</CellBody>
             <CellFooter>张三</CellFooter>
           </Cell>
-          <Cell>
+          <Cell onClick={()=>actions.push('/form/passive/')}>
             <CellBody>被保人信息</CellBody>
             <CellFooter>张三</CellFooter>
           </Cell>
