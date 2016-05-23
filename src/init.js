@@ -6,10 +6,10 @@ import configureRouter from './routes';
 import { browserHistory } from 'react-router';
 import { syncHistoryWithStore } from 'react-router-redux';
 
-const store = configureStore();
+const store = configureStore({history:browserHistory});
 const history = syncHistoryWithStore(browserHistory, store);
 const routes = configureRouter(history);
-
+window.store = store;
 export default function Init() {
   ReactDOM.render(
     <Provider store={store}>

@@ -8,14 +8,14 @@ const cx = classNames.bind(styles);
 
 class ListComponent extends React.Component {
   render() {
-    //const {actions} = this.props;
+    const {actions} = this.props;
     return (
       <div className="grey-bg">
         <div className={cx('banner')}></div>
         <div className="weui_cells_title h1">推荐产品</div>
         <div className={cx('list')}>
           <Panel access={true}>
-            <PanelBody>
+            <PanelBody onClick={()=>actions.push('/insure')}>
               <MediaBox>
                 <MediaBoxDescription>
                   <img className={cx('img')} src="./../../images/u20.PNG" />
