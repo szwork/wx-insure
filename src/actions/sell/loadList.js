@@ -1,10 +1,10 @@
-import {LOAD_LIST} from './../const';
-import services from 'services';
+import {LOAD_LIST} from 'actions/const';
+import qryproductlist from 'services/qryproductlist';
 
 module.exports = function(parameter) {
 //   console.log(services);
   return (dispatch) => {
-    services(parameter).then(resp=>{
+    qryproductlist().then(resp=>{
         dispatch({
             type:LOAD_LIST,
             payload:resp

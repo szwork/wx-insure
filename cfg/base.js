@@ -2,6 +2,8 @@
 let path = require('path');
 let defaultSettings = require('./defaults');
 let additionalPaths = [];
+let {URL_BASE} = require('./../src/services');
+
 module.exports = {
   additionalPaths: additionalPaths,
   port: defaultSettings.port,
@@ -19,7 +21,13 @@ module.exports = {
     hot: true,
     port: defaultSettings.port,
     publicPath: defaultSettings.publicPath,
-    noInfo: false
+    noInfo: false,
+    // proxy: {
+    //   [`${URL_BASE}*`]: {
+    //     target: 'https://other-server.example.com',
+    //     secure: false
+    //   }
+    // }
   },
   resolve: {
     extensions: [

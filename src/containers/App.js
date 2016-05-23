@@ -27,7 +27,7 @@ class App extends Component {
  */
 App.propTypes = {
   actions: PropTypes.object.isRequired,
-  insure: PropTypes.object.isRequired,
+  insure: PropTypes.array.isRequired,
   me: PropTypes.object.isRequired,
   routing: PropTypes.object.isRequired
 };

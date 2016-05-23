@@ -1,0 +1,30 @@
+{
+  "header": {
+    "rspcode": "0000",
+    "rspdesc": "成功"
+  },
+  "response": {
+    "crset": {
+      "list": [
+        {
+          "productid": "产品ID",
+          "name": "粉红关爱险",
+          "type": "1",
+          "slogan": "宫颈癌 | 乳腺癌 | 保障一年",
+          "price": "36500",
+          "unit": "单位",
+          "bgimgurl": "./../../images/u20.PNG"
+        },
+        {
+          "productid": "产品ID2222",
+          "name": "瑞博士书",
+          "type": "1",
+          "slogan": "癌症介绍 | 身体健康",
+          "price": "6600",
+          "unit": "单位",
+          "bgimgurl": "./../../images/u20.PNG"
+        }
+      ]
+    }
+  }
+}

@@ -48,4 +48,28 @@
   .black{
     color:$color-font-black;
   }
+  
+  #toast{
+    opacity:0;
+    position: fixed;
+    z-index: 10;
+    background-color: rgba(50,50,50,.8);
+    bottom: 10vh;
+    color: white;
+    padding: .1em 1em;
+    border-radius: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    transition: 2s opacity;
+    &.toast{
+      opacity: 1;
+    }
+  }
+  
+  .ng-show{
+    display: block !important;
+  }
+  .ng-hide{
+    display: none !important;
+  }
 }
