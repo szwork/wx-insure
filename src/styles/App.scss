@@ -7,12 +7,25 @@
     color:$color-h2;
   }
 
+//reset of weui
   .weui_btn_primary{
     background-color:$color-btn-bg;
-    &:active{
+    &:not(.weui_btn_disabled):active{
       background-color:darken($color-btn-bg,10);
     }
   }
+  
+  .weui_cell_ft{
+    color:inherit;
+  }	
+  
+  .weui_cell.no_access{
+		.weui_cell_ft {
+			&:after{
+				content:none;
+			}
+		}
+	}
 
   .grey-bg{
     height: 100vh;
@@ -21,5 +34,9 @@
   
   .h1{
     @include h1;
+  }
+  
+  .black{
+    color:$color-font-black;
   }
 }

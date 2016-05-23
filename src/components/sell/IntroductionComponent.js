@@ -1,14 +1,17 @@
 'use strict';
 
 import React from 'react';
-
-require('styles/sell/Introduction.scss');
+import classNames from 'classnames/bind';
+import {Cells,Cell,CellBody,CellFooter,Button} from 'react-weui';
+import styles from 'styles/sell/List.scss';
+const cx = classNames.bind(styles);
 
 class IntroductionComponent extends React.Component {
   render() {
     return (
-      <div className="introduction-component">
-        Please edit src/components/sell//IntroductionComponent.js to update this component!
+      <div>
+        <img className={cx('img')} src="./../../images/u20.PNG" />
+        1
       </div>
     );
   }
