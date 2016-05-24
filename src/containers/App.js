@@ -13,10 +13,21 @@ import { connect } from 'react-redux';
 import { push, replace, goBack } from 'react-router-redux';
 import 'weui';
 import 'styles/App.scss';
+// import {RouteTransition,presets} from 'react-router-transition';
+
 /* Populated by react-webpack-redux:reducer */
 class App extends Component {
   render() {
     const {children,...other} = this.props;
+    // return <RouteTransition
+    //   component={false}
+    //   pathname={other.location.pathname}
+    //   {...presets.pop}
+    // >
+    //   {
+    //     React.cloneElement(children, other)
+    //   }
+    // </RouteTransition>
     return React.cloneElement(children, other);
   }
 }
@@ -33,17 +44,18 @@ App.propTypes = {
 };
 function mapStateToProps(state) {
   /* Populated by react-webpack-redux:reducer */
-  const props = {
-    insure: state.insure,
-    me: state.me,
-    routing: state.routing
-  };
-  return props;
+  // const props = {
+  //   insure: state.insure,
+  //   me: state.me,
+  //   routing: state.routing
+  // };
+  return state;
 }
 function mapDispatchToProps(dispatch) {
   /* Populated by react-webpack-redux:action */
   const actions = {
     loadList: require('../actions/sell/loadList.js') ,
+    sellSet: require('../actions/sell/sellSet.js') ,
     push, replace, goBack
   };
   const actionMap = { actions: bindActionCreators(actions, dispatch) };

@@ -3,6 +3,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import {Article, Form, FormCell, CellBody, CellHeader, Label, Button, Input, Select} from 'react-weui';
+import DateElement from 'DateElement';
 import styles from 'styles/sell/List.scss';
 const cx = classNames.bind(styles);
 
@@ -34,12 +35,16 @@ class FormComponent extends React.Component {
           </FormCell>
           <FormCell>
             <CellHeader><Label>出生日期</Label></CellHeader>
-            <CellBody><Input type="date"/></CellBody>
+            <CellBody><DateElement><Input/></DateElement></CellBody>
           </FormCell>
           {
             people === 'active' ? <FormCell>
               <CellHeader><Label>性别</Label></CellHeader>
-              <CellBody><Input type="date"/></CellBody>
+              <CellBody>
+                <Select>
+                  <option value="1">女</option>
+                </Select>
+              </CellBody>
             </FormCell> : null
           }
           {

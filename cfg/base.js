@@ -2,7 +2,6 @@
 let path = require('path');
 let defaultSettings = require('./defaults');
 let additionalPaths = [];
-let {URL_BASE} = require('./../src/services');
 
 module.exports = {
   additionalPaths: additionalPaths,
@@ -15,6 +14,7 @@ module.exports = {
     publicPath: `.${defaultSettings.publicPath}`
   },
   devServer: {
+    host:'0.0.0.0',
     contentBase: './src/',
     inline:true,
     historyApiFallback: true,

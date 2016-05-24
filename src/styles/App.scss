@@ -26,6 +26,19 @@
 			}
 		}
 	}
+  
+  //reset of mobiscroll
+  
+  #wx-insur .mbsc-android-holo-light{
+    .dwv{
+      color: $color-btn-bg;
+      border-bottom: 2px solid $color-btn-bg;
+    }
+    .dwwol{
+      border-top: 2px solid $color-btn-bg;
+      border-bottom: 2px solid $color-btn-bg;
+    }
+  } 
 
   .grey-bg{
     height: 100vh;
@@ -71,5 +84,9 @@
   }
   .ng-hide{
     display: none !important;
+  }
+  
+  .font-s{
+    font-size:12px;
   }
 }
