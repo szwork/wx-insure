@@ -9,6 +9,7 @@
 const path = require('path');
 const srcPath = path.join(__dirname, '/../src');
 const dfltPort = 8000;
+var webpack = require('webpack');
 
 /**
  * Get the default modules object for webpack
@@ -48,9 +49,19 @@ function getDefaultModules() {
   };
 }
 
+
+var env = process.env.REACT_WEBPACK_ENV ;
+var defaultPlugins = [
+  new webpack.DefinePlugin({
+        __DEV__: env !== 'dist',
+        'process.env.NODE_ENV':JSON.stringify(env === 'dist' ? 'production' : 'development')
+    })
+]
+
 module.exports = {
   srcPath: srcPath,
   publicPath: '/assets/',
   port: dfltPort,
-  getDefaultModules: getDefaultModules
+  getDefaultModules: getDefaultModules,
+  defaultPlugins:defaultPlugins
 };

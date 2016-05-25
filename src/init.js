@@ -9,7 +9,7 @@ import { syncHistoryWithStore } from 'react-router-redux';
 const store = configureStore({history:browserHistory});
 const history = syncHistoryWithStore(browserHistory, store);
 const routes = configureRouter(history);
-window.store = store;
+
 export default function Init() {
   ReactDOM.render(
     <Provider store={store}>
@@ -18,3 +18,5 @@ export default function Init() {
     document.getElementById('app')
   )
 }
+
+__DEV__ && (window.util = require('util'));

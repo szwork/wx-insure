@@ -4,11 +4,12 @@ let path = require('path');
 let srcPath = path.join(__dirname, '/../src/');
 
 let baseConfig = require('./base');
+let defaultSettings = require('./defaults');
 
 // Add needed plugins here
 let BowerWebpackPlugin = require('bower-webpack-plugin');
 
-module.exports = {
+let config = {
   devtool: 'eval',
   module: {
     preLoaders: [
@@ -38,21 +39,15 @@ module.exports = {
       }
     ]
   },
-  resolve: {
-    extensions: [ '', '.js', '.jsx' ],
-    alias: {
-      actions: srcPath + 'actions/',
-      helpers: path.join(__dirname, '/../test/helpers'),
-      components: srcPath + 'components/',
-      sources: srcPath + 'sources/',
-      stores: srcPath + 'stores/',
-      styles: srcPath + 'styles/',
-      config: srcPath + 'config/' + process.env.REACT_WEBPACK_ENV
-    }
-  },
-  plugins: [
+  plugins: defaultSettings.defaultPlugins.concat([
     new BowerWebpackPlugin({
       searchResolveModulesDirectories: false
     })
-  ]
+  ])
 };
+
+config = Object.assign({}, baseConfig, config)
+
+config.resolve.alias.helpers = path.join(__dirname, '/../test/helpers'),
+
+module.exports =  config

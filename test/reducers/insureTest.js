@@ -1,4 +1,4 @@
-var reducer = require('../../src/reducers/insure');
+var reducer = require('../../src/reducers/sell/insure');
 
 describe('insure', () => {
 
