@@ -1,14 +1,33 @@
 /* global $ */
-import 'app-zepto';
+import $ from 'app-zepto';
 import {toast} from 'util';
 
-export const URL_BASE = '/service/';
+export const URL_BASE = '/PinkHealthServer/api/';
+
+function genHead(cmd,conf = {}){
+  let h = {
+    userid:conf.userid || '',
+    telephone:'',
+    token:'',
+    cmd,
+  }
+  return h;
+}
+
+function genParam(cmd,param,conf){
+  var header = genHead(cmd,conf)
+  var p = {
+    header,
+    request:param    
+  }
+  return JSON.stringify(p);
+}
 
 export default function ({cmd,param,conf}) {
   return new Promise(function (resolve, reject) {
     $.ajax({
       url:`${URL_BASE}${cmd}`,
-      data: param,
+      data: genParam(cmd,param,conf),
       type:'POST',
       dataType:'json',
       success(resp) {

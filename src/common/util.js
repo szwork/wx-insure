@@ -35,7 +35,8 @@ export function md5(str,upper = true){
 
 
 //与微信对接的几个函数
-var shop_key = '192006250b4c09247ec02edce69f6a2d';
+export const appid = 'wx93dc0a80f8852743';
+export const shop_key = '192006250b4c09247ec02edce69f6a2d';
 
 export const wx = {
   timeStamp(){
