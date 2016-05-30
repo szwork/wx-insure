@@ -5,6 +5,7 @@ import classNames from 'classnames/bind';
 import {Panel,PanelBody,MediaBox,MediaBoxTitle,MediaBoxDescription,MediaBoxInfo,MediaBoxInfoMeta} from 'react-weui';
 import styles from 'styles/sell/List.scss';
 import {cent2Yuan} from 'util';
+import {detailPath} from 'bussConst';
 const cx = classNames.bind(styles);
 
 const ProductList = (props)=>{
@@ -25,7 +26,7 @@ const ProductList = (props)=>{
    */
   return (
     <Panel access={true}>
-      <PanelBody onClick={()=>actions.push('/insure')}>
+      <PanelBody onClick={()=>actions.push(detailPath[type])}>
         <MediaBox>
           <MediaBoxDescription>
             <img className={cx('img')} src={bgimgurl} />

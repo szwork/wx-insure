@@ -46,7 +46,6 @@ export const wx = {
     return Math.random().toString(36).slice(2);//生成随机数算法
   },
   /**
-   * 
    * 第一步，设所有发送或者接收到的数据为集合M，将集合M内非空参数值的参数按照参数名ASCII码从小到大排序（字典序），使用URL键值对的格式（即key1=value1&key2=value2…）拼接成字符串stringA。
     特别注意以下重要规则：
     ◆ 参数名ASCII码从小到大排序（字典序）；
@@ -56,7 +55,6 @@ export const wx = {
     ◆ 微信接口可能增加字段，验证签名时必须支持增加的扩展字段
     第二步，在stringA最后拼接上key得到stringSignTemp字符串，并对stringSignTemp进行MD5运算，再将得到的字符串所有字符转换为大写，得到sign值signValue。
     key设置路径：微信商户平台(pay.weixin.qq.com)-->账户设置-->API安全-->密钥设置
-   * 
    */
   sign(obj,key = shop_key){
     let keyArr = Object.keys(obj);

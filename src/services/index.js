@@ -18,7 +18,7 @@ function genParam(cmd,param,conf){
   var header = genHead(cmd,conf)
   var p = {
     header,
-    request:param    
+    request:param
   }
   return JSON.stringify(p);
 }

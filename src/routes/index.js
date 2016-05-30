@@ -10,7 +10,7 @@ export default function configureRouter(history){
         <IndexRoute component={require('./../components/home/HomeComponent')}/>
         <Route path="list" component={require('./../components/sell/ListComponent')}/>
         <Route path="insure" component={require('./../components/sell/InsureComponent')}></Route>
-        <Route path="intro" component={require('./../components/sell/IntroductionComponent')}/>
+        <Route path="intro(/:type)" component={require('./../components/sell/IntroductionComponent')}/>
         <Route path="form/:people" component={require('./../components/sell/FormComponent')}/>
         <Route path="entity" component={require('./../components/sell/EntityComponent')}/>
         <Route path="me" component={require('./../components/sell/InsureComponent')}/>

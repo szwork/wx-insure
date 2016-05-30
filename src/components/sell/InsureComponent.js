@@ -31,7 +31,7 @@ class InsureComponent extends React.Component {
       <div>
         <img className={cx('img') } src="./../../images/u20.PNG" />
         <Cells access={true}>
-          <Cell onClick={() => actions.push('/intro') }>
+          <Cell onClick={() => actions.push('/intro/1') }>
             <CellBody>
               <h3>粉红关爱险</h3>
               <p>宫颈癌最高理赔： 30, 000元</p>

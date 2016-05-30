@@ -1,3 +1,4 @@
+/* global __DEV__ */
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
@@ -20,3 +21,4 @@ export default function Init() {
 }
 
 __DEV__ && (window.util = require('util'));
+'4';
